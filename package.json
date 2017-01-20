@@ -1,9 +1,11 @@
 {
   "name": "something",
   "dependencies": {
+    "async": "^2.1.4",
     "backbone": "^1.3.3",
     "browserify": "~10.2.4",
     "browserify-incremental": "^3.0.1",
+    "fast_bindall": "0.0.1",
     "underscore": "^1.8.3"
   },
   "license": "MIT",

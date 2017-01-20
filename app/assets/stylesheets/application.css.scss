@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "compass";
+@import "calcite-web";
+
+#main {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	box-shadow: lightgrey 0px 0px 5px 2px;
+}
+
+section#side_bar {
+	display: inline-block;
+	height: 100vh;
+	overflow: hidden;
+	background-color: $lighter-blue;
+}
+
+section#interface {
+	display: inline-block;
+	height: 100vh;
+	overflow: hidden;
+	background-color: $light-blue;
+}
+
+#loading-overlay {
+	position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #fff;
+    z-index:9999;
+}
+
+.fast_transition {
+ 	-webkit-transition: all 0.15s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+    transition: all 0.15s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+
+.medium_transition {
+ 	-webkit-transition: all 0.5s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+    transition: all 0.55s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+
+.slow_transition {
+ 	-webkit-transition: all 0.75s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+    transition: all 0.75s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+.app_list_item_view {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.app_list_item_view.selected,
+.app_list_item_view:hover {
+	padding-left: 5px;
+	background-color: $dark-blue;
+	color: #fff;
+	cursor: pointer;
+}

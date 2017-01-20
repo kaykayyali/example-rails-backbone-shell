@@ -18,5 +18,6 @@ var Main_View = require('./app/main.js');
 $('document').ready(function(){
 	var main_view = new Main_View();
 	main_view.render();
+	Global_View_Cache["Main"] = main_view;
 	$('body').append(main_view.el);
 });

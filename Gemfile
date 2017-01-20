@@ -14,13 +14,20 @@ gem 'sqlite3'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Compass CSS plugin manager
+gem 'compass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Handles Loading Npm modules and Require
 gem "browserify-rails"
 
+# Esri based css framework
+gem "calcite-web", :git => "https://github.com/Esri/calcite-web.git", :tag => "v1.0.0-rc.1"
+
+# JST Templating
 gem 'ejs'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
