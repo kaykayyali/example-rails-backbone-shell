@@ -30,11 +30,18 @@ var Interface_View = Backbone.View.extend({
   },
   handle_app_change: function(event, app) {
     console.log("Successful Change app event!!!", app);
+    this.render_app(app);
+  },
+  render_app: function(app) {
+    this.current_app = app;
+    var app = new app.root_view();
+    app.render();
+    this.$el.html(app.el);
   },
   render_dashboard: function() {
     this.dashboard = new Dashboard_View();
     this.dashboard.render();
-    this.$el.find('#interface-main').append(this.dashboard.el);
+    this.$el.append(this.dashboard.el);
   }
 });
 

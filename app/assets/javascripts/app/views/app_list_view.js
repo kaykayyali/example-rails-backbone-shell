@@ -19,6 +19,7 @@ var App_List_View = Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.template);
+    Global_View_Cache["Side_Bar_App_List"] = this;
     this.render_apps_list();
   },
   deselect_app: function() {
@@ -51,20 +52,18 @@ var App_List_View = Backbone.View.extend({
 
   // Cycle through Global apps and render a new list item with the app attached
   render_app_list_item: function(app) {
-    if (this.validate_app(app)) {
+    if (!this.validate_app(app)) {
+       console.warn("Failed to validate app:", app);
+      return;
+    }
       var options = {
         model: app,
         parent_view: this
       }
-      var new_app_list_item = new App_List_Item_View(options);
-      new_app_list_item.render();
-      this.$el.append(new_app_list_item.el);
-      this.rendered_apps[app.name] = new_app_list_item;
-    }
-    else {
-      console.warn("Failed to validate app:", app);
-      return;
-    }
+    var new_app_list_item = new App_List_Item_View(options);
+    new_app_list_item.render();
+    this.$el.append(new_app_list_item.el);
+    this.rendered_apps[app.name] = new_app_list_item;
   },
 
   select_app: function(app) {

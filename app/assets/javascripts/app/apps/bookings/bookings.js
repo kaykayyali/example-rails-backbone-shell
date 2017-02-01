@@ -1,10 +1,10 @@
 var Bookings_View = Backbone.View.extend({
 
-  tagName: "section",
+  tagName: "div",
 
   className: "bookings_view",
   
-  id: "booking",
+  id: "bookings",
 
   events: {
 
@@ -12,10 +12,11 @@ var Bookings_View = Backbone.View.extend({
 
   initialize: function() {
     Fast_Bindall(this);
+    this.template = JST['app/templates/bookings'];
   },
 
   render: function() {
-    this.$el.html("Bookings view");
+    this.$el.html(this.template);
   }
 
 });

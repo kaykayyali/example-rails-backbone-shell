@@ -14,14 +14,12 @@
  *= require_self
  */
 @import "compass";
-$vw-ratio : .99;
 @import "calcite-web";
 
 #main {
 	overflow-x: hidden;
 	overflow-y: hidden;
 	box-shadow: lightgrey 0px 0px 5px 2px;
-	width: 100%;
 }
 
 div#side_bar {
@@ -72,4 +70,15 @@ div#interface {
 	background-color: $dark-blue;
 	color: #fff;
 	cursor: pointer;
+}
+
+.app-mini-view:hover .card {
+	cursor: pointer;
+	box-shadow: lightgrey 0px 0px 5px 2px;
+}
+
+.app-mini-view {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: transparent;
 }

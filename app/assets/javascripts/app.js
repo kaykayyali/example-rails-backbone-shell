@@ -9,11 +9,13 @@ window.Backbone = require('backbone');
 window.Fast_Bindall = require('fast_bindall');
 window._ = require('underscore');
 var Bookings_App = require('./app/apps/bookings/bookings_app');
+var Inventory_App = require('./app/apps/inventory/inventory_app');
 
 // GLOBAL LIBRARIES AND VARS SHOULD GO HERE
 // This is included first and available before the app is created
 window.Client_Data = {};
 window.Global_View_Cache = {};
 window.Apps = {
-	bookings: new Bookings_App()
+	bookings: new Bookings_App(),
+	inventory: new Inventory_App()
 }
