@@ -13,24 +13,25 @@
  *= require_tree .
  *= require_self
  */
-
 @import "compass";
+$vw-ratio : .99;
 @import "calcite-web";
 
 #main {
 	overflow-x: hidden;
 	overflow-y: hidden;
 	box-shadow: lightgrey 0px 0px 5px 2px;
+	width: 100%;
 }
 
-section#side_bar {
+div#side_bar {
 	display: inline-block;
 	height: 100vh;
 	overflow: hidden;
 	background-color: $lighter-blue;
 }
 
-section#interface {
+div#interface {
 	display: inline-block;
 	height: 100vh;
 	overflow: hidden;

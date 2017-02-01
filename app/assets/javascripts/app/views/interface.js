@@ -1,7 +1,7 @@
 var Dashboard_View = require('./dashboard')
 var Interface_View = Backbone.View.extend({
 
-  tagName: "section",
+  tagName: "div",
 
   className: "column-20 tablet-column-10 phone-column-6",
 
